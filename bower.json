@@ -24,8 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.17",
-    "weather-icons": "~0.0.1"
+    "angular": "^1.2.6",
+    "weather-icons": "^0.0.1"
   },
   "devDependencies": {
     "moment": "~2.6.0",
