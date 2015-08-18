@@ -20,8 +20,10 @@ weatherModule.service('weatherService', function($http) {
         service.curWeather[location] = { temp: {}, clouds: null };
         $http({
           method: 'GET',
-          headers:{
-            'Access-Control-Allow-Headers': undefined
+          transformRequest: function (data, headersGetter) {
+            var headers = headersGetter();
+            delete headers['Authorization'];
+            return headers;
           },
           url: 'http://api.openweathermap.org/data/2.5/weather?q='+location+'&units='+units+'&cnt=5'
         }).success(function(data) {
@@ -47,8 +49,10 @@ weatherModule.service('weatherService', function($http) {
 
         $http({
           method: 'GET',
-          headers:{
-            'Access-Control-Allow-Headers': undefined
+          transformRequest: function (data, headersGetter) {
+            var headers = headersGetter();
+            delete headers['Authorization'];
+            return headers;
           },
           url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+location+'&units='+units+'&cnt=10'
         }).success(function(data) {
