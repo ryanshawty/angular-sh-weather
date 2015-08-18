@@ -5,7 +5,7 @@
     "Shaun Husain <shaun.husain@gmail.com>"
   ],
   "description": "Simple directive for displaying the weather forecast using openweathermap.org data and weather-icons from Erik Flowers.",
-  "main": "weatherDirective.js",
+  "main": "dist/angular-weather-directive.min.js",
   "keywords": [
     "angular",
     "angularjs",
